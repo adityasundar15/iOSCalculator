@@ -1,0 +1,83 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);    
+    background-color: black;
+}
+
+
+.calculator-grid > .active-operation {
+    background-color: aliceblue;
+    color: orange; 
+}
+
+.calculator-grid > .orange {
+    background-color: orange;
+}
+
+.calculator-grid > .orange:hover {
+    background-color: rgb(245, 197, 107);
+    transition: 0.3s;
+}
+
+.calculator-grid > .light-gray {
+    background-color: rgb(150, 150, 150);
+}
+
+.calculator-grid > .light-gray:hover {
+    background-color: rgb(212, 211, 211);
+    transition: 0.3s;
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 0px;
+    background-color: rgb(61, 61, 61);
+    border-radius: 50%;
+    color: aliceblue;
+    margin: 5%;
+}
+
+.calculator-grid > button:hover {
+    background-color: rgba(176, 176, 176);
+    transition: 0.3s;
+}
+
+.calculator-grid > .span-two {
+    grid-column: span 2;
+    border-radius: 5000px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 15%;
+}
+
+.output {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    color: white;
+    font-size: 10vh;
+    word-wrap: break-word;
+    word-break: break-all;
+}
